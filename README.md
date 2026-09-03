@@ -2,9 +2,9 @@
 
 ## Project Overview
 
-This project is a real-time embedded system for detecting counterfeit Indian banknotes using a Raspberry Pi 4 and UV-based fluorescent security-fiber analysis.
+This project is a real-time embedded system for detecting potentially counterfeit Indian banknotes using a Raspberry Pi 4 and UV-based fluorescent security-fiber analysis.
 
-The system uses UV illumination to detect fluorescent security features present in genuine Indian currency notes. Image processing and computer vision techniques are used to analyze the captured image and authenticate the currency.
+The system uses UV illumination to detect fluorescent security features present in genuine Indian currency notes. The Pi Camera captures the currency image, and image processing and computer vision techniques are used to analyze the captured image and authenticate the currency.
 
 ## Features
 
@@ -58,27 +58,41 @@ cd Raspberry-Pi-Currency-Authentication
 Install the required Python libraries:
 pip install -r Requirements.txt
 
-How It Works:
-The currency note is placed in front of the camera.
-UV illumination is applied to the currency note.
-The Pi Camera captures the image.
-OpenCV processes the captured image.
-Fluorescent security features are analyzed.
-Image processing techniques are used for authentication.
-The system determines whether the currency is genuine or potentially counterfeit.
-The authentication result is displayed on the LCD.
+## Usage and How It Works
 
-Technologies Used:
-Raspberry Pi 4
-Python
-OpenCV
-Computer Vision
-Picamera2
-NumPy
-RPLCD
-I2C LCD
-UV Fluorescence Analysis
-Applications
+1. Place the currency note in front of the Pi Camera.
+2. Apply UV illumination to the currency note.
+3. The Pi Camera captures the image of the note.
+4. OpenCV processes the captured image.
+5. Fluorescent security features are analyzed using image processing techniques.
+6. The system compares the detected features with the reference patterns.
+7. The system determines whether the currency is genuine or potentially counterfeit.
+8. The authentication result is displayed on the LCD.
+
+## Technologies Used
+
+- Raspberry Pi 4
+- Python
+- OpenCV
+- Computer Vision
+- Picamera2
+- NumPy
+- RPLCD
+- I2C LCD
+- UV Fluorescence Analysis
+
+## Applications
+
+- Assisting in the authentication of Indian banknotes
+- Low-cost embedded counterfeit detection
+- Computer-vision-based currency analysis
+
+ ## Limitations
+
+- Authentication performance depends on image quality and lighting conditions.
+- The currency note must be positioned appropriately in front of the camera.
+- The system is designed for the supported currency denominations only.
+
 
 This system can be used as a low-cost embedded solution for assisting with the authentication of Indian banknotes and demonstrating computer-vision-based counterfeit detection.
 
